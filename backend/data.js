@@ -1,11 +1,34 @@
+import bcrypt from 'bcryptjs'
 const data = {
+  users: [
+    {
+      name: 'Vivek',
+      email: 'admin@example.com',
+      password: bcrypt.hashSync('1234', 8),
+      isAdmin: true,
+      // isSeller: true,
+      // seller: {
+      //   name: 'Puma',
+      //   logo: '/images/logo1.png',
+      //   description: 'best seller',
+      //   rating: 4.5,
+      //   numReviews: 120,
+      // },
+    },
+    {
+      name: 'John',
+      email: 'user@example.com',
+      password: bcrypt.hashSync('1234', 8),
+      isAdmin: false,
+    },
+    ],
     products: [
       {
-        _id: '1',
+       // _id: '1',
         name: 'Nike Slim Shirt',
         category: 'Shirts',
         image: '/images/p1.jpg',
-        price: 120,
+        price: 120, 
         countInStock: 10,
         brand: 'Nike',
         rating: 4.5,
@@ -13,7 +36,7 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '2',
+        //_id: '2',
         name: 'Adidas Fit Shirt',
         category: 'Shirts',
         image: '/images/p2.jpg',
@@ -25,7 +48,7 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '3',
+       // _id: '3',
         name: 'Lacoste Free Shirt',
         category: 'Shirts',
         image: '/images/p3.jpg',
@@ -37,7 +60,7 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '4',
+        //_id: '4',
         name: 'Nike Slim Pant',
         category: 'Pants',
         image: '/images/p4.jpg',
@@ -49,7 +72,7 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '5',
+       // _id: '5',
         name: 'Puma Slim Pant',
         category: 'Pants',
         image: '/images/p5.jpg',
@@ -61,7 +84,7 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '6',
+       // _id: '6',
         name: 'Adidas Fit Pant',
         category: 'Pants',
         image: '/images/p6.jpg',
